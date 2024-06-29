@@ -1,9 +1,13 @@
-const sendMessage = async(payload) => {
+const sendMessage = async() => {
 
     const url = 'https://api.telegram.org/bot7257071849:AAFHpwPl7U2f8McbFExHJh8S8Lzjp34JgVI/sendMessage'
+    const [name, email, phone] = [document.getElementById('name').value, document.getElementById('email').value, document.getElementById('phone').value]
+
+    if (!name || !email || !phone) return
+
     const request = {
         chat_id: 1151533771,
-        text: `Name: ${payload.name}\nEmail: ${payload.email}\nPhone: ${payload.phone}`,
+        text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}`,
     }
 
     const telegramResponse = await fetch(url, {
