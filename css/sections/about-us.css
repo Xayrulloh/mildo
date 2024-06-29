@@ -1,0 +1,30 @@
+.about-us {
+    padding: 48px 0;
+    background-color: #f2f0ee;
+}
+
+.about-us__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-us__title {
+    margin: 0;
+    letter-spacing: -.025em;
+    font-family: 'Alverata', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    font-size: 32px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.about-us__desc {
+    margin: 0;
+    font-family: 'Alverata', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}

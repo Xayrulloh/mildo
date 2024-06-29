@@ -53,6 +53,10 @@
     }
 }
 
+.collections_list_link {
+    color: inherit;
+}
+
 .collections__list-title {
     font-family: 'Alverata', sans-serif;
     font-size: 24px;
