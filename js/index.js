@@ -34,11 +34,12 @@ const sendMessage = async(name, phone, email) => {
 
 }
 
-const onSubmit = (event) => {
+const onSubmit = async (event) => {
     event.preventDefault();
     const [name, phone, email] = event.target.elements;
 
-    sendMessage(name.value, phone.value, email.value)
+    await sendMessage(name.value, phone.value, email.value)
+    event.target.reset()
 }
 
 FORM.addEventListener('submit', onSubmit)
