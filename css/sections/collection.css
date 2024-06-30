@@ -43,9 +43,6 @@
     justify-content: center;
 
     &:hover {
-        .collections__list-title {
-        }
-        
         .collections__list-img {
             filter: brightness(.7);
             scale: 1.1;
@@ -55,6 +52,7 @@
 
 .collections_list_link {
     color: inherit;
+    text-decoration: none;
 }
 
 .collections__list-title {

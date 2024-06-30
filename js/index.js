@@ -1,7 +1,8 @@
-const sendMessage = async() => {
+const FORM = document.getElementById('contact-form');
+
+const sendMessage = async(name, phone, email) => {
 
     const url = 'https://api.telegram.org/bot7257071849:AAFHpwPl7U2f8McbFExHJh8S8Lzjp34JgVI/sendMessage'
-    const [name, email, phone] = [document.getElementById('name').value, document.getElementById('email').value, document.getElementById('phone').value]
 
     if (!name || !email || !phone) return
 
@@ -32,3 +33,12 @@ const sendMessage = async() => {
     }
 
 }
+
+const onSubmit = (event) => {
+    event.preventDefault();
+    const [name, phone, email] = event.target.elements;
+
+    sendMessage(name.value, phone.value, email.value)
+}
+
+FORM.addEventListener('submit', onSubmit)
